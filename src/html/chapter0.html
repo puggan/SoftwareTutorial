@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Puggan's Software Developing Tutorial - 0 - Hello World</title>
+    </head>
+    <body>
+        <fieldset hidden>
+            <input type="radio" name="language" value="js" id="lang_js"/>
+            <input type="radio" name="language" value="ts" id="lang_ts"/>
+            <input type="radio" name="language" value="php" id="lang_php"/>
+            <input type="radio" name="language" value="py" id="lang_py"/>
+            <input type="radio" name="language" value="java" id="lang_java"/>
+            <input type="radio" name="language" value="cs" id="lang_cs"/>
+            <input type="radio" name="language" value="c99" id="lang_c99"/>
+        </fieldset>
+        <main>
+            <header>
+                <h1><span class="s">Puggan's Software Developing Tutorial</span> 0 - Hello World</h1>
+                <p>The clasic Hello World program.</p>
+                <p>
+                    Before you can start writing any software, you need to get working envirement,
+                    that as a minimum writes a string of text back when executed.
+                    The use of the string "Hello World"
+                    <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">
+                        dates back to a Tutorial from 1974
+                    </a>.
+                    In most case a main-function is executed, and it execute a print-command to show the text.
+                </p>
+                <p>
+                    First section bellow is going to show a code-exemple, thats going to be the base for all coming
+                    exemples.
+                    You can switch between the different language, and see how simular or different they are.
+                    After that is instructions for how to execute it, inclusive a short explanation of what the rows do.
+                    After that are an installation and envirement setup instruction for each langauge.
+                </p>
+            </header>
+            <section>
+                <h2>Code exemple: Hello World</h2>
+                <ul class="language_selector">
+                    <li><label for="lang_js">Javascript / NodeJS</label></li>
+                    <li><label for="lang_ts">Typescript</label></li>
+                    <li><label for="lang_php">PHP</label></li>
+                    <li><label for="lang_py">Python</label></li>
+                    <li><label for="lang_java">Java</label></li>
+                    <li><label for="lang_cs"></label></li>
+                    <li><label for="lang_c99">Javascript</label></li>
+                </ul>
+                <section data-lang="js">
+                    <h3>Javascript, hello.js</h3>
+                    <pre>
+                        (async () => {
+                            console.log("Hello World");
+                        })();
+                    </pre>
+                </section>
+                <section data-lang="ts">
+                    <h3>Typescript, hello.ts</h3>
+                    <pre>
+                        (async () => {
+                            console.log("Hello World");
+                        })();
+                    </pre>
+                </section>
+                <section data-lang="php">
+                    <h3>PHP, hello.php</h3>
+                    <pre>
+                        &lt;?php
+                        (static function() {
+                            echo "Hello World", PHP_EOL;
+                        })();
+                    </pre>
+                </section>
+                <section data-lang="py">
+                    <h3>Python, hello.py</h3>
+                    <pre>
+                        def main():
+                                print("Hello World");
+
+                        if __name__ == "__main__":
+                                main()
+                    </pre>
+                </section>
+                <section data-lang="java">
+                    <h3>java, hello.java</h3>
+                    <pre>
+                        public class Main {
+                            public static void main(String[] args) {
+                                System.out.println("Hello World");
+                            }
+                        }
+                    </pre>
+                </section>
+                <section data-lang="cs">
+                    <h3>C# (C Sharp), hello.cs</h3>
+                    <pre>
+                        using System;
+
+                        public class HelloWorld
+                        {
+                            public static int Main(string[] args) {
+                                Console.WriteLine("Hello World");
+                                return 0;
+                            }
+                        }
+                    </pre>
+                </section>
+                <section data-lang="c99">
+                    <h3>C, C99, hello.c</h3>
+                    <pre>
+                        #include &lt;stdio.h>
+
+                        int main(char argc, char* argv) {
+                                printf("Hello World");
+                                return 0;
+                        }
+                    </pre>
+                </section>
+            </section>
+            <section>
+                <h2>Execution exemples</h2>
+                <p>
+                    Save the code above in to a file, in the coming examples we going to use the suggested filename from the headers above.
+                </p>
+                <p>
+                    If you installed an IDE for the language you want to test, there may be an Play-icon to run the file.
+                </p>
+                <p>
+                    If you got the tools correctly installed,
+                    the examples bellow should work from a terminal,
+                    if the file is in the terminals working directory.
+                    If you need help installing the tools, check the next section of this page.
+                </p>
+                <section data-lang="js">
+                    <h3>Javascript, hello.js</h3>
+                    <p>In a terminal</p>
+                    <pre>
+                        node hello.js
+                    </pre>
+                    <p>
+                        In a webbrowser, open the console, often a part of the developer inpsection tools, accessable with the F12-key.
+                        Then paste the content of the file.
+                    </p>
+                </section>
+                <section data-lang="ts">
+                    <h3>Typescript, hello.ts</h3>
+                    <pre>
+                        tsc --target ES2018 hello.ts
+                        node hello.js
+                    </pre>
+                </section>
+                <section data-lang="php">
+                    <h3>PHP, hello.php</h3>
+                    <pre>
+                        php hello.php
+                    </pre>
+                </section>
+                <section data-lang="py">
+                    <h3>Python, hello.py</h3>
+                    <pre>
+                        python3 hello.py
+                    </pre>
+                </section>
+                <section data-lang="java">
+                    <h3>java, hello.java</h3>
+                    <pre>
+                        java hello.java
+                    </pre>
+                </section>
+                <section data-lang="cs">
+                    <h3>C# (C Sharp), hello.cs</h3>
+                    <pre>
+                        mcs hello.cs
+                        ./hello.exe
+                    </pre>
+                </section>
+                <section data-lang="c99">
+                    <h3>C, C99, hello.c</h3>
+                    <pre>
+                        gcc hello.c
+                        ./a.out
+                    </pre>
+                </section>
+            </section>
+        </main>
+    </body>
+</html>
